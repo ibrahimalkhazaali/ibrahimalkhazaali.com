@@ -1,94 +1,66 @@
 <! DOCTYPE html>
 < html  lang="ar" dir="rtl">
 < head>
-    <meta  charset="UTF- 8">
-    <meta  name="viewport" content="width=device-width, initial-scale= 1.0">
-    <title>إبراهيم الخزعلي</ title>
-    < style>
-         body {
-            background-color: # 1a1a1a;
-             color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin:  0;
-             padding:  0;
-        }
-         h 1 {
-             color: #ffcc 00;
-             margin-top:  40px;
-        }
-        . subtitle {
-            font-size:  18px;
-             margin:  10px 0 30px 0;
-             color: #ccc;
-        }
-        nav a {
-            color: #ffcc 00;
-             text-decoration: none;
-            margin:  0 10px;
-             font-weight: bold;
-        }
-        nav {
-            margin-bottom:  30px;
-        }
-        . about, .welcome {
-            background-color: # 333;
-             padding:  15px;
-             margin:  20px;
-             border-radius:  10px;
-             line-height:  1.6;
-        }
-         footer {
-            margin-top:  30px;
-             font-size:  14px;
-             color: # 888;
-        }
-        . social-links a {
-            display: inline-block;
-            margin:  10px;
-             color: #fff;
-            text-decoration: none;
-            font-size:  16px;
-             padding:  8px 15px;
-             background-color: #ffcc 00;
-             border-radius:  5px;
-        }
-        . social-links a:hover {
-            background-color: #e 6 b 800;
-        }
-    </ style>
+  <meta  charset="utf- 8" />
+  <meta  name="viewport" content="width=device-width,initial-scale= 1" />
+  <title>إبراهيم الخزعلي</ title>
+  < style>
+    : root{--bg:# 222;-- text:#fff;--muted:#aaa;--accent:#ffcc 00}
+    *{ box-sizing:border-box}
+    html,body{height: 100%}
+     body{
+      margin: 0;
+       font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding: 40 px  16px;
+       line-height: 1.6;
+       text-align:center;
+    }
+    header{width: 100%; max-width: 900 px;margin-bottom: 20 px}
+    nav{display:flex;gap: 12 px;justify-content:center;flex-wrap:wrap;margin-bottom: 10 px}
+    nav a{color:var(--text);text-decoration:none;padding: 8 px  12px; border-radius: 6 px;background:rgba( 255,255,255,0.03)}
+     h 1{ font-size:clamp( 28 px, 6 vw, 44 px);margin: 10 px  0; color:var(--accent)}
+    .box{border: 3 px solid rgba( 255,255,255,0.12); padding: 20 px;border-radius: 10 px;display:inline-block;max-width: 900 px}
+    .about{max-width: 900 px;margin: 18 px  0}
+    . social-links{display:flex;gap: 10 px;justify-content:center;flex-wrap:wrap;margin-top: 12 px}
+    .social-links a{display:inline-block;padding: 8 px  12px; background:rgba( 255,255,255,0.04); color:var(--text);text-decoration:none;border-radius: 8 px}
+    footer{margin-top: 40 px;color:var(--muted);font-size: 14 px}
+    @media (min-width: 900 px){body{padding: 60 px}}
+  </style>
 </head>
 < body>
-
-    <h1>إبراهيم الخزعلي</ h 1>
-    <div  class="subtitle"> شاعر عراقي | تنمية بشرية | إعلام</ div>
-
-    < nav>
-        <a  href="#"> الرئيسية</ a>
-        < a  href="#"> أعمالي</ a>
-        < a  href="#"> اتصل بي</ a>
+  <header>
+    <nav>
+      <a  href="#"> الرئيسية</ a>
+      < a  href="#"> أعمالي</ a>
+      < a  href="#"> اتصل بي</ a>
     </nav>
+  </header>
 
-    < div  class="welcome">
-        < h2>مرحباً بكم في موقعي</ h 2>
-        <p>العُمق، يمزج الوجدان بروح فلسفية قريبة من الناس، يحب التنمية البشرية والقراءة، ويؤمن أن الثقافة حق للجميع.</ p>
+  < main>
+    <h1>إبراهيم الخزعلي</ h 1>
+
+    <div  class="box">
+      < p>شاعر عراقي | تنمية بشرية | إعلام</ p>
     </div>
 
-    < div  class="about">
-        < h2>نبذة عني</ h 2>
-        <p>أنا إبراهيم من محافظة الديوانية، شاعر شعبي عراقي أكتب عن المشاعر والحياة بروح فلسفية، أسعى أن أصل بكلمتي لكل إنسان وأرفع من الوعي والثقافة.</ p>
-    </div>
+    < section  class="about">
+      < h2>نبذة عني</ h 2>
+      <p>أنا إبراهيم من محافظة الديوانية، شاعر شعبي عراقي أكتب عن المشاعر والحياة بروح فلسفية، أسعى أن أصل بكلمتي لكل إنسان وأرفع من الوعي والثقافة.</ p>
+    </section>
 
-    < div  class="social-links">
-        < a  href="https://youtube.com/@ibrahim_alkhazaali?si=AqFf 4 pKd 8 H 9 X 1_ dQ" target="_blank"> يوتيوب</ a>
-        < a  href="https://www.instagram.com/ibrahim_alkhazaali?igsh=amhycjdydmp 2 Mm 15& utm_source=qr" target="_blank"> إنستغرام</ a>
-        < a  href="https://www.tiktok.com/@ibrahim_alkhazaali?_t=ZS- 8 ymuziTolgg&_r= 1"  target="_blank"> تيكتوك</ a>
-        < a  href="https://www.facebook.com/share/ 1 JTcXLEi 4 d/?mibextid=wwXIfr" target="_blank"> فيسبوك</ a>
-    </div>
+    < section  class="social-links">
+      < a  href="https://youtube.com/@ibrahim_alkhazaali?si=AqFf 4 pKd 8 H 9 X 1_ dQ" target="_blank" rel="noopener noreferrer"> يوتيوب</ a>
+      < a  href="https://www.instagram.com/ibrahim_alkhazaali?igsh=amhycjdydmp 2 Mm 15& utm_source=qr" target="_blank" rel="noopener noreferrer"> انستغرام</ a>
+      < a  href="https://www.tiktok.com/@ibrahim_alkhazaali?_t=ZS- 8 ymuziTolgg&_r= 1"  target="_blank" rel="noopener noreferrer"> تيك توك</ a>
+      < a  href="https://www.facebook.com/share/ 1 JTcXLEi 4 d/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"> فيسبوك</ a>
+    </section>
 
-    < footer>
-        © 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة
-    </ footer>
-
+    < footer>© 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة</ footer>
+  </main>
 </body>
 </html>
