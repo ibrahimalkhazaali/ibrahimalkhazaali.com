@@ -4,31 +4,63 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1" >
   <title>تواصل معي | إبراهيم الخزعلي</title>
   <meta name = "description" content = "صفحة التواصل مع الشاعر إبراهيم الخزعلي - روابط مباشرة لحساباته الاجتماعية." >
+  <link href = "https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel = "stylesheet" >
   <style>
-    body { font-family : 'Tahoma' , sans-serif; background-color : #fdfdfd ; color : #222 ; padding : 40px ; line-height : 2 ; direction : rtl; text-align : right;
-    } .contact-container { max-width : 800px ; margin : auto; background-color : #fff ; padding : 30px ; border-radius : 12px ; box-shadow : 0 0 15px rgba ( 0 , 0 , 0 , 0.1 );
+    body { margin : 0 ; font-family : 'Cairo' , sans-serif; background-color : #f5f5f5 ; color : #1a1a1a ; line-height : 1.8 ;
     }
 
-    h1 { color : #006699 ; margin-bottom : 20px ;
+    header { background-color : #2c3e50 ; color : white; padding : 30px 20px ; text-align : center;
+    }
+
+    nav { background-color : #34495e ; display : flex; justify-content : center; flex-wrap : wrap;
+    }
+
+    nav a { color : white; text-decoration : none; padding : 15px 20px ; display : block; transition : background-color 0.3s ;
+    }
+
+    nav a :hover ,
+    nav a :focus { background-color : #2c3e50 ; outline : none;
+    }
+
+    main { padding : 30px 20px ; max-width : 800px ; margin : auto;
+    }
+
+    h2 { color : #C19A6B ; margin-bottom : 15px ;
     }
 
     p { font-size : 1.1em ;
     } .social-links { display : flex; flex-wrap : wrap; justify-content : center; gap : 15px ; margin-top : 20px ;
-    } .social-links a { text-decoration : none; color : white; background-color : #3498db ; padding : 10px 20px ; border-radius : 8px ; transition : background-color 0.3s ;
-    } .social-links a :hover { background-color : #2980b9 ;
+    } .social-links a { text-decoration : none; color : white; background-color : #007BFF ; padding : 10px 20px ; border-radius : 8px ; transition : background-color 0.3s ;
+    } .social-links a :hover , .social-links a :focus { background-color : #0056b3 ; outline : none;
     }
 
-    a .back { display : inline-block; margin-top : 30px ; text-decoration : none; color : #3498db ; font-weight : bold;
-    }
+    footer { background-color : #2c3e50 ; color : white; text-align : center; padding : 15px ; margin-top : 40px ;
+    } @media ( max-width : 600px ) {
+      nav { flex-direction : column; align-items : center;
+      }
 
-    a .back:hover { color : #21618c ;
+      nav a { padding : 10px ; font-size : 0.9em ;
+      } .social-links { flex-direction : column; align-items : center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class = "contact-container" >
+  <header>
     <h1>تواصل معي</h1>
+    <p>يسعدني تواصلك ومشاركتك</p>
+  </header>
+
+  <nav>
+    <a href = "index.html" >الرئيسية</a>
+    <a href = "a3mali.html" >أعمالي</a>
+    <a href = "nobtha.html" >نبذة</a>
+    <a href = "tawasul.html" >تواصل</a>
+  </nav>
+
+  <main>
+    <h2>طرق التواصل</h2>
     <p>
       إذا تحب تتواصل وياي، تشاركني رأيك، أو تقترح فكرة جديدة، فـ يسعدني جداً أسمع منك.  
       تقدر تتواصل عبر حساباتي التالية:
@@ -40,9 +72,11 @@
       <a href = "https://www.tiktok.com/@ibrahim_alkhazaali" target = "_blank" >تيك توك</a>
       <a href = "https://www.facebook.com/share/1JTcXLEi4d" target = "_blank" >فيسبوك</a>
     </div>
+  </main>
 
-    <a href = "index.html" class = "back" >← العودة إلى الصفحة الرئيسية</a>
-  </div>
+  <footer>
+    © 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
