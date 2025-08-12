@@ -4,46 +4,84 @@
   <meta name = "viewport" content = "width=device-width, initial-scale=1" >
   <title>أعمالي | إبراهيم الخزعلي</title>
   <meta name = "description" content = "صفحة أعمال الشاعر إبراهيم الخزعلي - قصائد، فيديوهات، مشاركات إعلامية." >
+  <link href = "https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel = "stylesheet" >
   <style>
-    body { font-family : 'Tahoma' , sans-serif; background-color : #fdfdfd ; color : #222 ; padding : 40px ; line-height : 2 ; direction : rtl; text-align : right;
-    } .content { max-width : 800px ; margin : auto; background-color : #fff ; padding : 30px ; border-radius : 12px ; box-shadow : 0 0 15px rgba ( 0 , 0 , 0 , 0.1 );
+    body { margin : 0 ; font-family : 'Cairo' , sans-serif; background-color : #f5f5f5 ; color : #1a1a1a ; line-height : 1.8 ;
     }
 
-    h1 { color : #006699 ; margin-bottom : 20px ;
+    header { background-color : #2c3e50 ; color : white; padding : 30px 20px ; text-align : center;
+    }
+
+    nav { background-color : #34495e ; display : flex; justify-content : center; flex-wrap : wrap;
+    }
+
+    nav a { color : white; text-decoration : none; padding : 15px 20px ; display : block; transition : background-color 0.3s ;
+    }
+
+    nav a :hover ,
+    nav a :focus { background-color : #2c3e50 ; outline : none;
+    }
+
+    main { padding : 30px 20px ; max-width : 800px ; margin : auto;
+    }
+
+    h2 { color : #C19A6B ; margin-bottom : 15px ;
     }
 
     ul { list-style : none; padding : 0 ;
     }
 
-    ul li { margin-bottom : 15px ;
+    ul li { margin-bottom : 10px ;
     }
 
-    ul li a { text-decoration : none; color : #3498db ; font-weight : bold;
+    ul li a { text-decoration : none; color : #007BFF ; font-weight : bold;
     }
 
-    ul li a :hover { color : #21618c ;
+    ul li a :hover ,
+    ul li a :focus { color : #0056b3 ; outline : none;
     }
 
-    a .back { display : inline-block; margin-top : 30px ; text-decoration : none; color : #006699 ; font-weight : bold;
-    }
+    footer { background-color : #2c3e50 ; color : white; text-align : center; padding : 15px ; margin-top : 40px ;
+    } @media ( max-width : 600px ) {
+      nav { flex-direction : column; align-items : center;
+      }
 
-    a .back:hover { color : #2c3e50 ;
+      nav a { padding : 10px ; font-size : 0.9em ;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class = "content" >
+  <header>
     <h1>أعمالي</h1>
+    <p>كل ما أقدمه من قصائد ومحتوى إعلامي</p>
+  </header>
 
+  <nav>
+    <a href = "index.html" >الرئيسية</a>
+    <a href = "a3mali.html" >أعمالي</a>
+    <a href = "nobtha.html" >نبذة</a>
+    <a href = "tawasul.html" >تواصل</a>
+  </nav>
+
+  <main>
+    <h2>القصائد المنشورة:</h2>
     <ul>
       <li><a href = "tab3-belbel.html" >📜 قصيدة طبع بلبل</a></li>
       <li><a href = "takhayal.html" >📜 قصيدة تخيل تحبني</a></li>
-      <li><a href = "https://youtube.com/@ibrahim_alkhazaali" target = "_blank" >🎥 فيديوهات على يوتيوب</a></li>
-      <li><a href = "https://www.tiktok.com/@ibrahim_alkhazaali" target = "_blank" >🎥 مقاطع تيك توك</a></li> <!-- أضف المزيد لاحقاً --> </ul>
+    </ul>
 
-    <a href = "index.html" class = "back" >← العودة إلى الصفحة الرئيسية</a>
-  </div>
+    <h2>روابط الفيديوهات:</h2>
+    <ul>
+      <li><a href = "https://youtube.com/@ibrahim_alkhazaali" target = "_blank" >🎥 قناة يوتيوب</a></li>
+      <li><a href = "https://www.tiktok.com/@ibrahim_alkhazaali" target = "_blank" >🎥 حساب تيك توك</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    © 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة
+  </footer>
 
 </body>
 </html>
