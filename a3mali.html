@@ -1,75 +1,50 @@
 <!DOCTYPE html > <html lang = "ar" dir = "rtl" >
 <head>
   <meta charset = "UTF-8" >
-  <meta name = "viewport" content = "width=device-width, initial-scale=1" >
-  <title>نبذة عني | إبراهيم الخزعلي</title>
-  <meta name = "description" content = "نبذة عن الشاعر العراقي إبراهيم الخزعلي - شاعر شعبي من الديوانية، يكتب بأسلوب فلسفي قريب من الناس." >
-  <link href = "https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel = "stylesheet" >
+  <title>أعمالي</title>
   <style>
-    body { margin : 0 ; font-family : 'Cairo' , sans-serif; background-color : #f5f5f5 ; color : #1a1a1a ; line-height : 1.8 ;
+    body { font-family : 'Segoe UI' , sans-serif; background-color : #f9f9f9 ; margin : 0 ; padding : 0 ; text-align : center;
     }
 
-    header { background-color : #2c3e50 ; color : white; padding : 30px 20px ; text-align : center;
+    header { background-color : #4CAF50 ; color : white; padding : 20px 0 ;
     }
 
-    nav { background-color : #34495e ; display : flex; justify-content : center; flex-wrap : wrap;
+    h1 { margin : 0 ;
+    } .projects { display : flex; flex-wrap : wrap; justify-content : center; margin : 30px ;
+    } .project { background-color : white; border : 1px solid #ddd ; border-radius : 8px ; width : 300px ; margin : 15px ; padding : 20px ; box-shadow : 0 2px 5px rgba ( 0 , 0 , 0 , 0.1 ); transition : transform 0.3s ;
+    } .project:hover { transform : scale ( 1.03 );
+    } .project h2 { font-size : 20px ; margin-bottom : 10px ;
+    } .project p { font-size : 16px ; color : #555 ;
     }
 
-    nav a { color : white; text-decoration : none; padding : 15px 20px ; display : block; transition : background-color 0.3s ;
-    }
-
-    nav a :hover ,
-    nav a :focus { background-color : #2c3e50 ; outline : none;
-    }
-
-    main { padding : 30px 20px ; max-width : 800px ; margin : auto;
-    }
-
-    h2 { color : #C19A6B ; margin-bottom : 15px ;
-    }
-
-    p { font-size : 1.1em ; white-space : pre-line;
-    }
-
-    footer { background-color : #2c3e50 ; color : white; text-align : center; padding : 15px ; margin-top : 40px ;
-    } @media ( max-width : 600px ) {
-      nav { flex-direction : column; align-items : center;
-      }
-
-      nav a { padding : 10px ; font-size : 0.9em ;
-      }
+    footer { background-color : #eee ; padding : 15px ; font-size : 14px ; color : #333 ;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>نبذة عني</h1>
-    <p>تعرف على الشاعر إبراهيم الخزعلي</p>
+    <h1>أعمالي</h1>
   </header>
 
-  <nav>
-    <a href = "index.html" >الرئيسية</a>
-    <a href = "a3mali.html" >أعمالي</a>
-    <a href = "nobtha.html" >نبذة</a>
-    <a href = "tawasul.html" >تواصل</a>
-  </nav>
+  <div class = "projects" >
+    <div class = "project" >
+      <h2>موقع شخصي</h2>
+      <p>صممت موقع تعريفي باستخدام HTML وCSS لعرض معلوماتي الشخصية.</p>
+    </div>
 
-  <main>
-    <h2>من أنا؟</h2>
-    <p>
-أنا إبراهيم الخزعلي، شاعر شعبي عراقي من محافظة الديوانية، ولدت عام 1999.  
-أكتب الشعر بأسلوب يمزج البساطة بالعفوية، وأمزج الوجدان بروح فلسفية قريبة من الناس.  
-شغوف بالتنمية البشرية والقراءة، وأؤمن أن الثقافة حق للجميع.  
-أحب الحرية، وأتابع كل ما هو جديد ومهم، وأسعى دائمًا أن تكون كلمتي صوتًا للناس.
+    <div class = "project" >
+      <h2>تطبيق آلة حاسبة</h2>
+      <p>برمجت آلة حاسبة بسيطة بلغة JavaScript لحساب العمليات الأساسية.</p>
+    </div>
 
-رسالتي الشعرية هي أن أكتب بما يشعر به الآخرون، وأعبر عنهم بكلماتهم، لكن بروح أعمق.  
-أطمح أن تصل قصائدي لكل قلب يبحث عن الصدق، ولكل عقل يحب التأمل.
-    </p>
-  </main>
+    <div class = "project" >
+      <h2>تصميم شعار</h2>
+      <p>أنشأت شعار احترافي باستخدام Adobe Illustrator لمشروع تجاري صغير.</p>
+    </div>
+  </div>
 
-  <footer>
-    © 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة
+  <footer> &copy; 2025 إبراهيم الخزعلي. جميع الحقوق محفوظة.
   </footer>
 
 </body>
