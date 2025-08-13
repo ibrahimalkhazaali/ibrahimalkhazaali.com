@@ -116,7 +116,8 @@
       . then (response => response. json ())
       . then (data => { const container = document . getElementById ( "blog-posts" ); const entries = data.feed.entry. slice ( 0 , 2 );
 
-        entries. forEach (entry => { const title = entry.title.$t; const rawContent = entry.content.$t; const cleanText = rawContent. replace ( /<[^>]*>/g , '' ). trim (); const excerpt = cleanText.length > 250 ? cleanText. substring ( 0 , 250 ) + "..." : cleanText; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const link = entry.link. find (l => l.rel === "alternate" ).href; const preview = document . createElement ( "div" );
+        entries. forEach (entry => { const title = entry.title.$t; const rawContent = entry.content.$t; const tempDiv = document . createElement ( "div" );
+          tempDiv.innerHTML = rawContent; const cleanText = tempDiv.textContent. trim (); const excerpt = cleanText.length > 250 ? cleanText. substring ( 0 , 250 ) + "..." : cleanText; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const link = entry.link. find (l => l.rel === "alternate" ).href; const preview = document . createElement ( "div" );
           preview.className = "blog-preview" ;
           preview.innerHTML = `
             <h3>${title}</h3>
