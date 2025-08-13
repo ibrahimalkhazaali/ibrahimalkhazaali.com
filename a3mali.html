@@ -101,17 +101,7 @@
 
     <div class = "blogger-embed" >
       <h2>📝 قصائد مكتوبة ومنشورات نصية</h2>
-
-      <div class = "blog-preview" >
-        <p>أكتب لأني لا أحتمل الصمت، ولأني أؤمن أن الحرف حين يُقال بصدق، يصبح مرآة للروح.</p>
-        <small>منشور 1 - أغسطس 2025</small>
-      </div>
-
-      <div class = "blog-preview" >
-        <p>القصيدة لا تُكتب، هي التي تكتبنا حين نكون صادقين بما يكفي لنسمح لها بالظهور.</p>
-        <small>منشور 2 - أغسطس 2025</small>
-      </div>
-
+      <div id = "blog-posts" ></div>
       <a class = "watch-all" href = "https://ibrahimalkhazaali.blogspot.com" target = "_blank" >
         قراءة المزيد من الكتابات
       </a>
@@ -123,6 +113,17 @@
   <footer>
     © 2025 إبراهيم الخزعلي - جميع الحقوق محفوظة
   </footer>
+
+  <script> fetch ( "https://ibrahimalkhazaali.blogspot.com/feeds/posts/default?alt=json" )
+      . then (response => response. json ())
+      . then (data => { const container = document . getElementById ( "blog-posts" ); const entries = data.feed.entry. slice ( 0 , 2 );
+        entries. forEach (entry => { const content = entry.content.$t; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const preview = document . createElement ( "div" );
+          preview.className = "blog-preview" ;
+          preview.innerHTML = `<p>${content}</p><small>${date}</small>` ;
+          container. appendChild (preview);
+        });
+      });
+  </script>
 
 </body>
 </html>
