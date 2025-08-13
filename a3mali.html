@@ -48,8 +48,11 @@
     } .back-link { display : block; text-align : center; margin-top : 30px ; font-weight : bold; text-decoration : none; color : #007BFF ;
     } .back-link:hover { color : #0056b3 ;
     } .blog-preview { background-color : #fff ; border : 1px solid #ddd ; border-radius : 8px ; padding : 20px ; margin : 15px auto; box-shadow : 0 2px 5px rgba ( 0 , 0 , 0 , 0.05 ); max-width : 700px ; text-align : right;
-    } .blog-preview p { margin : 0 ; color : #333 ;
+    } .blog-preview h3 { margin-top : 0 ; color : #C19A6B ; font-size : 1.2em ;
+    } .blog-preview p { margin : 10px 0 ; color : #333 ;
     } .blog-preview small { display : block; margin-top : 8px ; color : #777 ; font-size : 0.9em ;
+    } .read-more { display : inline-block; margin-top : 10px ; padding : 6px 12px ; background-color : #007BFF ; color : #fff ; text-decoration : none; border-radius : 4px ; font-size : 0.9em ;
+    } .read-more:hover { background-color : #0056b3 ;
     }
 
     footer { background-color : #2c3e50 ; color : white; text-align : center; padding : 15px ; margin-top : 40px ;
@@ -117,14 +120,16 @@
   <script> fetch ( "https://ibrahimalkhazaali.blogspot.com/feeds/posts/default?alt=json" )
       . then (response => response. json ())
       . then (data => { const container = document . getElementById ( "blog-posts" ); const entries = data.feed.entry. slice ( 0 , 2 );
-        entries. forEach (entry => { const rawContent = entry.content.$t; const tempDiv = document . createElement ( "div" );
-          tempDiv.innerHTML = rawContent; const cleanText = tempDiv.textContent || tempDiv.innerText || "" ; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const preview = document . createElement ( "div" );
+        entries. forEach (entry => { const title = entry.title.$t; const rawContent = entry.content.$t; const tempDiv = document . createElement ( "div" );
+          tempDiv.innerHTML = rawContent; const cleanText = tempDiv.textContent || tempDiv.innerText || "" ; const excerpt = cleanText.length > 250 ? cleanText. substring ( 0 , 250 ) + "..." : cleanText; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const link = entry.link. find (l => l.rel === "alternate" ).href; const preview = document . createElement ( "div" );
           preview.className = "blog-preview" ;
-          preview.innerHTML = `<p>${cleanText}</p><small>${date}</small>` ;
+          preview.innerHTML = `
+            <h3>${title}</h3>
+            <p>${excerpt}</p>
+            <small>${date}</small>
+            <a class="read-more" href="${link}" target="_blank">قراءة كاملة</a>
+          ` ;
           container. appendChild (preview);
         });
       });
-  </script>
-
-</body>
-</html>
+  </
