@@ -117,9 +117,10 @@
   <script> fetch ( "https://ibrahimalkhazaali.blogspot.com/feeds/posts/default?alt=json" )
       . then (response => response. json ())
       . then (data => { const container = document . getElementById ( "blog-posts" ); const entries = data.feed.entry. slice ( 0 , 2 );
-        entries. forEach (entry => { const content = entry.content.$t; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const preview = document . createElement ( "div" );
+        entries. forEach (entry => { const rawContent = entry.content.$t; const tempDiv = document . createElement ( "div" );
+          tempDiv.innerHTML = rawContent; const cleanText = tempDiv.textContent || tempDiv.innerText || "" ; const date = new Date (entry.published.$t). toLocaleDateString ( "ar-EG" , { year : "numeric" , month : "long" , day : "numeric" }); const preview = document . createElement ( "div" );
           preview.className = "blog-preview" ;
-          preview.innerHTML = `<p>${content}</p><small>${date}</small>` ;
+          preview.innerHTML = `<p>${cleanText}</p><small>${date}</small>` ;
           container. appendChild (preview);
         });
       });
